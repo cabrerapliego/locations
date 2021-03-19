@@ -83,10 +83,17 @@
 
         map.addControl(new mapboxgl.NavigationControl(), "top-left"); 
         map.on('load', function() {
-
+          var file=""; 
+          var user=location.search.split("email=")[1];
+           
+            if(user.split("&")[0]=='rodcab'){
+                file="fence.geojson"
+          }else{
+            file="fence2.geojson"
+          }
           map.addSource("geo_data", {
 		"type": "geojson",
-		"data": "fence.geojson",
+		"data": file,
 		"buffer": 1,
 		"maxzoom": 14,
 		"generateId": true

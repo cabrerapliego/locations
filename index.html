@@ -91,15 +91,15 @@ h1{
 background:#3594D2; 
 }
 </style>
-<form method="post" action="map.html">
+<form method="get" action="map.html" id="forma">
 <div class="box">
 <h1>GEPP DEMO</h1>
 
 <input type="email" name="email" value="usuario" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
   
-<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+<input type="password" name="password" value="password" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
   
-<a href="#"><div class="btn">INGRESAR</div></a> <!-- End Btn -->
+<a href="#" onclick="document.getElementById('forma').submit();"><div class="btn">INGRESAR</div></a> <!-- End Btn -->
  
 </div> <!-- End Box -->
   
